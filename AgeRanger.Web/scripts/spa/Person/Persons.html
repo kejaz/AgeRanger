@@ -1,0 +1,85 @@
+﻿<div class="row">
+    <div class="panel panel-primary">
+        <div class="panel-heading clearfix">
+            <div class="col-lg-1">
+                <h4 class="panel-title pull-left" style="padding-top: 7.5px;"><i class="fa fa-home"></i> Persons </h4>
+            </div>
+            <div class="col-lg-1 pull-left ">
+                <button class="btn btn-primary" title="Add New Person" ng-click="openAddDialog(person);">Add New Person</button>
+            </div>
+            <div class="col-lg-5">
+
+            </div>
+            <div class="col-lg-5 input-group custom-search-form">
+                <input id="inputSearchCities" type="text" ng-model="filterPersons" class="form-control" placeholder="Filter, search perosns..">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" title="Filter, search persons.." ng-click="search();">Search</i></button>
+                    <button class="btn btn-primary" title="Clear Search box" ng-click="clearSearch();">Clear</button>
+                </span>
+            </div>
+          </div>
+        <div class="panel-body">
+            <div ng-if="loadingPersons">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4">
+                    <i class="fa fa-refresh fa-5x fa-spin"></i> <label class="label label-primary">Loading persons...</label>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6" ng-repeat="person in Persons | filter:filterPersons">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>{{person.FirstName}} {{person.LastName}}</strong><br />
+
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-condensed shortMargin">
+                                    <tr>
+                                        <td class="shortPadding">ID:</td>
+                                        <td class="shortPadding"><i>{{person.Id}}</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortPadding">First Name:</td>
+                                        <td class="shortPadding"><i>{{person.FirstName}}</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortPadding">Last Name:</td>
+                                        <td class="shortPadding"><i>{{person.LastName}}</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortPadding">Age:</td>
+                                        <td class="shortPadding"><i>{{person.Age}}</i></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="shortPadding">Age Group:</td>
+                                        <td class="shortPadding"><i>{{person.AgeGroup}}</i></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="panel-footer clearfix">
+                            
+                            <div class="col-lg-7">
+
+                            </div>
+                            <div class="col-lg-2">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" title="Edit Person" ng-click="openEditDialog(person);">Edit Person</button>
+                                </span>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Page Count: {{pagesCount}}
+        <div class="panel-footer">
+            <div class="text-center">
+                <custom-pager page="{{page}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="search(page)"></custom-pager>
+            </div>
+        </div>-->
+    </div>
+</div>

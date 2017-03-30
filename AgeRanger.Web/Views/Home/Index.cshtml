@@ -1,0 +1,94 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/site.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    
+</head>
+<body ng-app="ageranger">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("AgeRanger Application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav"></ul>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+        <a href="#/">Home</a>
+        <a href="#persons">Persons List</a>
+        
+
+    <div ng-view></div>
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+    @*<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>*@
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/Vendors/jquery_1.11.3.min.js"></script>
+    <script src="~/Scripts/Vendors/jquery.js"></script>
+    <script src="~/Scripts/Vendors/bootstrap.js"></script>
+    <script src="~/Scripts/Vendors/toastr.js"></script>
+    <script src="~/Scripts/Vendors/jquery.raty.js"></script>
+    <script src="~/Scripts/Vendors/respond.src.js"></script>
+    <script src="~/Scripts/Vendors/jquery_1.11.3.min.js"></script>
+    <script src="~/Scripts/Vendors/angular.js"></script>
+
+    <script src="~/Scripts/Vendors/angular-route.js"></script>
+    <script src="~/Scripts/Vendors/angular-cookies.js"></script>
+    <script src="~/Scripts/Vendors/angular-validator.js"></script>
+    <script src="~/Scripts/Vendors/angular-base64.js"></script>
+    <script src="~/Scripts/Vendors/angular-file-upload.js"></script>
+    <script src="~/Scripts/Vendors/angucomplete-alt.min.js"></script>
+    <script src="~/Scripts/Vendors/ui-bootstrap-tpls-0.13.1.js"></script>
+    <script src="~/Scripts/Vendors/bootstrap_3.3.5.min.js"></script>
+    <script src="~/Scripts/Vendors/bootstrap-dialog.js"></script>
+    <script src="~/Scripts/Vendors/underscore.js"></script>
+    <script src="~/Scripts/Vendors/raphael.js"></script>
+    <script src="~/Scripts/Vendors/morris.js"></script>
+    <script src="~/Scripts/Custom/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script src="~/Scripts/Custom/dist/js/sb-admin-2.js"></script>
+    <script src="~/Scripts/Vendors/jquery.fancybox.js"></script>
+    <script src="~/Scripts/Vendors/jquery.fancybox-media.js"></script>
+    <script src="~/Scripts/Vendors/loading-bar.js"></script>
+
+    <script src="~/scripts/spa/modules/common.core.js"></script>
+    <script src="~/scripts/spa/modules/common.ui.js"></script>
+
+    <script src="~/scripts/spa/app.js"></script>
+    <script src="~/scripts/spa/Pager/customPager.directive.js"></script>
+    <script src="~/scripts/spa/services/apiService.js"></script>
+    <script src="~/scripts/spa/services/notificationService.js"></script>
+    <script src="~/scripts/spa/Home/homeCtrl.js"></script>
+    <script src="~/scripts/spa/Person/personsCtrl.js"></script>
+    <script src="~/scripts/spa/Person/personAddCtrl.js"></script>
+
+    <script src="~/scripts/spa/Person/personEditCtrl.js"></script>
+    
+    <script src="~/scripts/spa/modules/common.core.js"></script>
+    <script src="~/scripts/spa/modules/common.ui.js"></script>
+        
+</body>
+</html>
